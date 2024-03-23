@@ -1,0 +1,28 @@
+.products {
+  padding: 50px 0;
+  background-color: #f7f7f7;
+  &__title {
+    margin-bottom: 32px;
+    text-align: center;
+    line-height: -1px;
+    font-size: clamp(2rem, 1.702rem + 1.49vw, 2.625rem);
+    font-weight: 700;
+  }
+
+  &__tabs {
+    margin-bottom: 80px;
+    text-align: center;
+  }
+
+  &__slider {
+    margin-bottom: clamp(1.875rem, 0.982rem + 4.46vw, 3.75rem);
+
+    @include desktop-small {
+      padding: 0 22px;
+    }
+  }
+
+  &__link {
+    text-align: center;
+  }
+}

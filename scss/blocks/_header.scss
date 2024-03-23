@@ -1,0 +1,106 @@
+.header {
+  position: relative;
+  background-color: var(--footer-bg);
+  background-image: url(./../../image/header-bg.jpg);
+  aspect-ratio: 1440/1084;
+  background-size: cover;
+  color: var(--header-text-color);
+  @include retina-bg(url(./../../image/headerxx.jpg));
+  a {
+    color: var(--header-text-color);
+  }
+  padding-top: 40px;
+
+  @include mobile {
+    padding-top: 20px;
+
+    padding-bottom: 140px;
+    background-position: center;
+    aspect-ratio: unset;
+  }
+}
+
+.nav {
+  display: grid;
+  grid-template-columns: 2fr 8fr 2fr;
+  gap: 20px;
+  &__logo {
+    align-self: center;
+    font-weight: 700;
+    letter-spacing: 0.28;
+    text-transform: capitalize;
+    font-size: clamp(1.125rem, 0.946rem + 0.89vw, 1.75rem);
+    color: #fff !important;
+  }
+}
+
+.header__nav {
+  margin-bottom: clamp(1.875rem, 0.875rem + 5vw, 5.375rem);
+}
+
+.header__content {
+  text-align: center;
+
+  p {
+    font-family: Gilroy-Regular;
+    font-size: clamp(1rem, 0.857rem + 0.71vw, 1.5rem);
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0%;
+    max-width: 606px;
+    margin: 0 auto;
+    opacity: 0.8;
+  }
+}
+.header__title {
+  //Свойство которое сохраняет положение текста балнсированным
+  text-wrap: balance;
+  letter-spacing: -0.8px;
+  font-size: clamp(1.875rem, 0.982rem + 4.46vw, 5rem);
+  margin-bottom: 14px;
+  line-height: 130%;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.header__search {
+  margin: 0 auto;
+  @include mobile-xl {
+    display: none !important;
+  }
+}
+
+.header__dot {
+  position: absolute;
+
+  @include mobile-xl {
+    display: none;
+  }
+}
+
+.header__dot-sofa {
+  left: calc(296 * 100% / 1440); // 1440 = 100% 296=x  x=296*100/1440
+  top: calc(685 * 100% / 1084);
+}
+.header__dot-vase {
+  left: calc(114 * 100% / 1410); // 1440 = 100% 296=x  x=296*100/1440
+  top: calc(754 * 100% / 1075);
+  transform: translate(-50%, -50%);
+}
+.header__dot-item {
+  left: calc(787 * 100% / 1405); // 1440 = 100% 296=x  x=296*100/1440
+  top: calc(810 * 100% / 1120);
+  transform: translate(-30%, -35%);
+}
+.header__dot-wall {
+  right: calc(46 * 100% / 1440); // 1440 = 100% 296=x  x=296*100/1440
+  top: calc(821 * 100% / 1084);
+  transform: translate(15%, -40%);
+}
+
+.any {
+  display: none;
+  @include mobile-xl {
+    display: block;
+  }
+}
